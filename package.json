@@ -1,0 +1,18 @@
+{
+  "name": "trello-json-to-cards",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/matheuscl/trello-json-to-cards.git",
+  "author": "matheuscl <hey@matheuscl.com>",
+  "license": "MIT",
+  "scripts": {
+    "get-boards": "node listBoards.js",
+    "get-board-lists": "node listLists.js",
+    "import-items": "node importItems.js"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "chalk": "^4.1.0",
+    "dotenv": "^8.2.0"
+  }
+}
