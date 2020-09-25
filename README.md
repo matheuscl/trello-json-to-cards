@@ -1,5 +1,5 @@
 # Create Trello cards using JSON file
-This's a very very simple Trello importer that I made to solve a little problem and I decided to share. xD
+This's a very very simple Trello importer that I made to solve a little problem and decided to share. xD
 
 ## Instalation Guide
 Just run `yarn install` =)
@@ -43,3 +43,10 @@ After all these steps you just need to run `yarn import-items` and wait till fin
 
 ## Contributing
 Feel free to fork or open an issue.
+
+# Todos
+- [ ] Make this a full cli integration =)
+- [ ] Move to TS
+- [ ] Improve the code quality kkk
+
+*This's a work in progress*
