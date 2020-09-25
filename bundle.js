@@ -14,7 +14,11 @@ console.log(
 
 
 const run = async () => {
-  const responses = await inquirer.promptQuestions()
+  try {
+    await inquirer.promptQuestions()
+  } catch (error) {
+    console.error(chalk.red('Error: ') + error.message);
+  }
 }
 
 run()
