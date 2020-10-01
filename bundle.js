@@ -1,9 +1,12 @@
+#!/usr/bin/env node
+
 const chalk = require('chalk');
 const clear = require('clear');
 const figlet = require('figlet');
 const inquirer = require('./lib/inquirer/init');
+const trelloImporter = require('./importItems')
 
-// clear();
+clear();
 
 console.log(
   chalk.yellow(
@@ -11,11 +14,11 @@ console.log(
   )
 );
 
-
-
 const run = async () => {
   try {
-    await inquirer.promptQuestions()
+    let {appKey, appToken, listId, jsonFile} = await inquirer.promptQuestions()
+
+    trelloImporter.importItems(appKey, appToken, listId, jsonFile)
   } catch (error) {
     console.error(chalk.red('Error: ') + error.message);
   }
